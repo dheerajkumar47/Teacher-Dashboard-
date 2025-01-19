@@ -1,0 +1,11 @@
+{
+  "teacher": {
+    "id": "T001",
+    "name": "John Doe"
+  },
+  "courses": [
+    { "id": "CSE101", "name": "Data Structures" },
+    { "id": "CSE102", "name": "Algorithms" },
+    { "id": "CSE103", "name": "Operating Systems" }
+  ]
+}

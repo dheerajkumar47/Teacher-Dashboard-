@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { View, StyleSheet } from "react-native";
+import TeacherInfo from "./src/Components/TeacherInfo";
+import CourseList from "./src/Components/CourseList";
+import SearchBar from "./src/Components/SearchBar";
 
-export default function App() {
+const App = () => {
+  const [teacher, setTeacher] = useState({});
+  const [courses, setCourses] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Fetch initial teacher and course data
+  useEffect(() => {
+    const fetchTeacherData = async () => {
+      try {
+        const teacherResponse = await fetch("http://localhost:3000/api/teacher");
+        const teacherData = await teacherResponse.json();
+        setTeacher(teacherData);
+
+        const coursesResponse = await fetch("http://localhost:3000/api/courses");
+        const coursesData = await coursesResponse.json();
+        setCourses(coursesData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchTeacherData();
+  }, []);
+
+  // Filtered courses based on searchQuery
+  const filteredCourses = courses.filter((course) =>
+    course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    course.id.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <TeacherInfo teacher={teacher} />
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} setCourses={setCourses} />
+      <CourseList courses={filteredCourses} />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  container: { padding: 20 },
 });
+
+export default App;
