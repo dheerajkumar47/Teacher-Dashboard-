@@ -1,0 +1,63 @@
+{
+  "teacher": [
+    { "id": "T001", "name": "John Doe" },
+    { "id": "T002", "name": "Jane Smith" },
+    { "id": "T003", "name": "Emily Davis" },
+    { "id": "T004", "name": "Michael Johnson" },
+    { "id": "T005", "name": "Sarah Wilson" },
+    { "id": "T006", "name": "David Brown" },
+    { "id": "T007", "name": "Sophia Miller" },
+    { "id": "T008", "name": "James Anderson" },
+    { "id": "T009", "name": "Olivia Martinez" },
+    { "id": "T010", "name": "Isabella Garcia" },
+    { "id": "T011", "name": "Ethan Hernandez" },
+    { "id": "T012", "name": "Charlotte Moore" },
+    { "id": "T013", "name": "Mason Lee" },
+    { "id": "T014", "name": "Ava Gonzalez" },
+    { "id": "T015", "name": "Liam Hall" }
+  ],
+  "courses": [
+    { "id": "CSE101", "name": "Data Structures", "teacherId": "T001" },
+    { "id": "CSE102", "name": "Algorithms", "teacherId": "T001" },
+    { "id": "CSE103", "name": "Operating Systems", "teacherId": "T002" },
+    { "id": "CSE104", "name": "Computer Networks", "teacherId": "T002" },
+    { "id": "CSE105", "name": "Database Systems", "teacherId": "T003" },
+    { "id": "CSE106", "name": "Software Engineering", "teacherId": "T003" },
+    { "id": "CSE107", "name": "Artificial Intelligence", "teacherId": "T004" },
+    { "id": "CSE108", "name": "Machine Learning", "teacherId": "T004" },
+    { "id": "CSE109", "name": "Web Development", "teacherId": "T005" },
+    { "id": "CSE110", "name": "Cybersecurity", "teacherId": "T005" },
+    { "id": "CSE111", "name": "Cloud Computing", "teacherId": "T006" },
+    { "id": "CSE112", "name": "IoT Systems", "teacherId": "T006" },
+    { "id": "CSE113", "name": "Blockchain", "teacherId": "T007" },
+    { "id": "CSE114", "name": "Data Science", "teacherId": "T007" },
+    { "id": "CSE115", "name": "Quantum Computing", "teacherId": "T008" },
+    { "id": "CSE116", "name": "Parallel Computing", "teacherId": "T008" },
+    {
+      "id": "CSE117",
+      "name": "Human-Computer Interaction",
+      "teacherId": "T009"
+    },
+    { "id": "CSE118", "name": "Ethical Hacking", "teacherId": "T009" },
+    {
+      "id": "CSE119",
+      "name": "Natural Language Processing",
+      "teacherId": "T010"
+    },
+    { "id": "CSE120", "name": "Big Data Analytics", "teacherId": "T010" },
+    { "id": "CSE121", "name": "Embedded Systems", "teacherId": "T011" },
+    { "id": "CSE122", "name": "Image Processing", "teacherId": "T011" },
+    { "id": "CSE123", "name": "Virtual Reality", "teacherId": "T012" },
+    { "id": "CSE124", "name": "Augmented Reality", "teacherId": "T012" },
+    { "id": "CSE125", "name": "Information Retrieval", "teacherId": "T013" },
+    { "id": "CSE126", "name": "Game Development", "teacherId": "T013" },
+    {
+      "id": "CSE127",
+      "name": "Digital Signal Processing",
+      "teacherId": "T014"
+    },
+    { "id": "CSE128", "name": "Cryptography", "teacherId": "T014" },
+    { "id": "CSE129", "name": "Control Systems", "teacherId": "T015" },
+    { "id": "CSE130", "name": "Robotics", "teacherId": "T015" }
+  ]
+}
