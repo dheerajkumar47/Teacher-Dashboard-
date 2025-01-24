@@ -14,14 +14,21 @@ app.use(express.json());
 app.get("/api/teacher", (req, res) => {
   const searchQuery = req.query.q?.toLowerCase(); // Get 'q' query param
   if (searchQuery) {
-    const filteredTeachers = data.teacher.filter((teacher) =>
-      teacher.name.toLowerCase().includes(searchQuery)
-    );
+    const filteredTeachers = data.teacher.filter((teacher) => {
+      const firstName = teacher["First name"]; // Access "First name"
+      if (firstName) {
+        return firstName.toLowerCase().startsWith(searchQuery); // Match starting letters
+      }
+      return false;
+    });
+
     if (filteredTeachers.length === 0) {
       return res.status(404).json({ message: "No teacher found" });
     }
+
     return res.json(filteredTeachers); // Send filtered teacher(s)
   }
+
   res.json(data.teacher); // Return all teachers if no query is provided
 });
 
